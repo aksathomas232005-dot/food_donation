@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SharePlate — Donor Dashboard</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="donor-page">
+
+<nav class="nav">
+  <div class="nav-logo">Share<span>Plate</span></div>
+  <div class="nav-right">
+    <div class="nav-user">Hello, <strong id="userName">Donor</strong></div>
+    <button class="btn-logout" id="logoutBtn">Sign Out</button>
+  </div>
+</nav>
+
+<div class="dashboard">
+
+  <!-- FOOD FORM -->
+  <div class="panel">
+    <h2 class="panel-title">🍱 Share Food</h2>
+    <form id="foodForm">
+      <div class="form-group">
+        <label>Food Name</label>
+        <input type="text" id="foodName" placeholder="e.g. Biryani, Wedding Cake..." required>
+      </div>
+      <div class="form-group">
+        <label>Quantity (servings)</label>
+        <input type="number" id="quantity" placeholder="e.g. 20" min="1" required>
+      </div>
+      <div class="form-group">
+        <label>Available Until</label>
+        <input type="datetime-local" id="expiry" required>
+      </div>
+      <div class="form-group">
+        <label>Pickup Address</label>
+        <input type="text" id="address" placeholder="Full address for pickup" required>
+      </div>
+      <div class="form-group">
+        <label>Food Photo (optional)</label>
+        <div class="upload-area">
+          <label class="upload-label" for="imageUpload">
+            <span class="icon">📷</span>
+            <span>Click to upload a photo</span>
+          </label>
+          <input type="file" id="imageUpload" accept="image/*">
+        </div>
+        <img id="preview" alt="Food preview">
+      </div>
+      <button type="submit" class="btn-primary">Share Food</button>
+    </form>
+  </div>
+
+  <!-- MAP -->
+  <div class="panel">
+    <h2 class="panel-title">📍 Pickup Location</h2>
+    <div class="map-container">
+      <iframe
+        id="mapFrame"
+        src="https://maps.google.com/maps?q=kerala&t=&z=13&ie=UTF8&iwloc=&output=embed">
+      </iframe>
+    </div>
+    <p style="margin-top:1rem; color:var(--text-muted); font-size:.85rem;">
+      The map will update to your pickup address when you submit.
+    </p>
+  </div>
+
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>

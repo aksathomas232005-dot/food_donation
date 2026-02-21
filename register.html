@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SharePlate — Create Account</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="auth-page">
+  <div class="auth-left">
+    <div class="auth-brand">
+      <div class="logo">Share<span>Plate</span></div>
+      <p>Join a community turning surplus food into hope for those who need it most.</p>
+      <div class="auth-stats">
+        <div class="auth-stat">
+          <span class="num">2.4k</span>
+          <span class="label">Meals Shared</span>
+        </div>
+        <div class="auth-stat">
+          <span class="num">380</span>
+          <span class="label">Donors</span>
+        </div>
+        <div class="auth-stat">
+          <span class="num">12t</span>
+          <span class="label">Food Saved</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="auth-right">
+    <div class="auth-box">
+      <h2>Create account</h2>
+      <p class="subtitle">Start sharing or receiving food today</p>
+
+      <form id="registerForm">
+        <div class="form-group">
+          <label>Full Name</label>
+          <input type="text" id="registerName" placeholder="Your name" required>
+        </div>
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" id="registerEmail" placeholder="you@example.com" required>
+        </div>
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" id="registerPassword" placeholder="Min. 6 characters" required>
+        </div>
+        <div class="form-group">
+          <label>I want to</label>
+          <select id="registerRole">
+            <option value="donor">Donate food — I have surplus to share</option>
+            <option value="recipient">Receive food — I need assistance</option>
+          </select>
+        </div>
+        <button type="submit" class="btn-primary">Create Account</button>
+      </form>
+
+      <div class="auth-link">
+        Already have an account? <a href="index.html">Sign in</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SharePlate — Available Food</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="receiver-page">
+
+<nav class="nav">
+  <div class="nav-logo">Share<span>Plate</span></div>
+  <div class="nav-right">
+    <div class="nav-user">Hello, <strong id="userName">User</strong></div>
+    <button class="btn-logout" id="logoutBtn">Sign Out</button>
+  </div>
+</nav>
+
+<div class="dashboard">
+
+  <!-- FOOD CARDS -->
+  <div class="panel">
+    <h2 class="panel-title">🌿 Food Near You</h2>
+    <div class="cards-grid" id="foodCards">
+      <div class="loading-state">
+        <div class="spinner"></div>
+        <p>Finding food near you...</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAP -->
+  <div class="panel">
+    <h2 class="panel-title">📍 Nearby Locations</h2>
+    <div class="map-container">
+      <iframe
+        id="mapFrame"
+        src="https://maps.google.com/maps?q=kerala&t=&z=13&ie=UTF8&iwloc=&output=embed">
+      </iframe>
+    </div>
+    <p style="margin-top:1rem; color:var(--text-muted); font-size:.85rem;">
+      Map shows the location of the nearest available food listing.
+    </p>
+  </div>
+
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
